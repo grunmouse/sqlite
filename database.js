@@ -45,7 +45,7 @@ class Database extends psqlite3.Database {
 	}
 		
 	runResource(path){
-		return this.runFile(Path.join(res, '..', '..', path));
+		return this.runFile(Path.join(res, path));
 	}
 	
 }
