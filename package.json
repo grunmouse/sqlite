@@ -1,0 +1,14 @@
+{
+  "name": "@grunmouse/sqlite",
+  "version": "1.0.0",
+  "description": "my variant a interface of sqlite3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sqlite3": "^4.1.1"
+  }
+}
