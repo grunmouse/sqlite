@@ -1,9 +1,10 @@
 const psqlite3 = require('./psqlite3.js');
 const fsp = require('fs').promises;
 const Path = require('path');
-const res = process.argv[process.execArgv.length+1];
+//const res = process.argv[process.execArgv.length+1];
+const res = require.main.path;
 
-
+//console.log(require.main);
 
 class Database extends psqlite3.Database {
 
