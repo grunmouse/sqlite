@@ -6,6 +6,20 @@ class Statement{
 	}
 }
 
+/* Свойства оператора, пробрасываемые как есть */
+[
+	'lastID',
+	'changes',
+	'sql'
+].forEach((prop)=>{
+	Object.defineProperty(Statement.prototype, prop,	{
+		get:function(){
+			return this.stmt && this.stmt[prop]
+		}
+	})
+});
+
+
 /* Методы оператора, оборачиваемые в Promise с самовозвратом*/
 [
 	'bind',
@@ -121,6 +135,7 @@ Database.prototype.Statement = Statement;
 		}
 	})
 });
+
 
 /* Методы базы данных, оборачиваемые в Promise без дополнительной обработки*/
 [
